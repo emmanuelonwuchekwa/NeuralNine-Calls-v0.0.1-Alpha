@@ -1,14 +1,13 @@
+import tkinter as tk
 from vidstream import *
-import tkinter as tk 
 import socket
-import threading
-
 
 local_ip_address = socket.gethostbyname(socket.gethostname())
 print(local_ip_address)
 
 server = StreamingServer(local_ip_address, 7777)
 receiver = AudioReceiver(local_ip_address, 6666)
+
 
 def start_listening():
     t1 = threading.Thread(target=server.start_server)
@@ -36,28 +35,26 @@ def start_audio_stream():
 
 
 # GUI
-
-
 window = tk.Tk()
 window.title("NeuralNine Calls v0.0.1 Alpha")
-window.geometry('300x200')
+window.geometry('300x250')
 
-label_target_ip = tk.Label(window, text="Target IP:")
+label_target_ip = tk.Label(window, text="Enter Target IP:")
 label_target_ip.pack()
 
-text_target_ip = tk.Text(window, height=1)
+text_target_ip = tk.Text(window, height=1, width=30)
 text_target_ip.pack()
 
-btn_listen = tk.Button(window, text="Start Listening", width=50, command=start_listening)
-btn_listen.pack(anchor=tk.CENTER, expand=True)
+btn_listen = tk.Button(window, text="Initiate Server", width=30, command=start_listening)
+btn_listen.pack(pady=5)
 
-btn_camera = tk.Button(window, text="Start Camera Stream", width=50, command=start_camera_stream)
-btn_camera.pack(anchor=tk.CENTER, expand=True)
+btn_camera = tk.Button(window, text="Begin Camera Streaming", width=30, command=start_camera_stream)
+btn_camera.pack(pady=5)
 
-btn_screen = tk.Button(window, text="Start Screen Sharing", width=50, command=start_screen_sharing)
-btn_screen.pack(anchor=tk.CENTER, expand=True)
+btn_screen = tk.Button(window, text="Start Screen Sharing", width=30, command=start_screen_sharing)
+btn_screen.pack(pady=5)
 
-btn_audio = tk.Button(window, text="Start Audio Stream", width=50, command=start_audio_stream) 
-btn_audio.pack(anchor=tk.CENTER, expand=True)
+btn_audio = tk.Button(window, text="Start Audio Stream", width=30, command=start_audio_stream)
+btn_audio.pack(pady=5)
 
 window.mainloop()
