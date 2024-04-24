@@ -2,6 +2,7 @@
 NeuralNine Calls v0.0.1 Alpha is a lightweight Python application designed for real-time communication between devices over a local network. This project leverages the VidStream library to enable video and audio calls, screen sharing, and audio streaming functionalities. Whether you're collaborating on projects, conducting virtual meetings, or catching up with friends and family, NeuralNine Calls provides a versatile platform for seamless communication.
 
 Features 🛠
+
 Video and Audio Calls: Initiate high-quality video and audio calls between devices on the same local network.
 Screen Sharing: Share your screen in real-time during calls to collaborate on documents, deliver presentations, or provide remote assistance.
 Audio Streaming: Stream audio from one device to another, enabling clear and crisp audio transmission.
