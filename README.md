@@ -5,12 +5,16 @@ Features 🛠
 Video and Audio Calls: Initiate high-quality video and audio calls between devices on the same local network.
 Screen Sharing: Share your screen in real-time during calls to collaborate on documents, deliver presentations, or provide remote assistance.
 Audio Streaming: Stream audio from one device to another, enabling clear and crisp audio transmission.
+
 Usage👥
+
 Start Listening: Launches the server to listen for incoming connections from other devices.
 Start Camera Stream: Initiates a camera stream to share live video with connected devices.
 Start Screen Sharing: Begins screen sharing to broadcast your screen to connected devices.
 Start Audio Stream: Starts streaming audio from your device to connected devices.
+
 Getting Started🎨
+
 Clone the repository to your local machine.
 Install the required dependencies by running pip install vidstream in your terminal.
 Run the main.py file to start the application.
